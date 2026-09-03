@@ -5,34 +5,22 @@
   "inbounds": [
     {
       "listen": "127.0.0.1",
-      "port": 44399,
-      "protocol": "socks",
-      "settings": {
-        "udp": true
-      }
-    }
-  ],
-  "outbounds": [
-    {
+      "port": 9939,
       "protocol": "vmess",
       "settings": {
-        "vnext": [
+        "clients": [
           {
-            "address": "160.250.130.103",
-            "port": 9384,
-            "users": [
-              {
-                "id": "c692503e-a4a4-4b35-bf45-84f13c876e6a",
-                "alterId": 0,
-                "security": "auto"
-              }
-            ]
+            "id": "c692503e-a4a4-4b35-bf45-84f13c876e6a",
+            "alterId": 0
           }
         ]
       },
       "streamSettings": {
-        "network": "tcp",
-        "security": "none"
+        "network": "ws",
+        "security": "none",
+        "wsSettings": {
+          "path": "/"
+        }
       }
     }
   ]
